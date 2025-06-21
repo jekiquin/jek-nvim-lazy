@@ -22,11 +22,6 @@ return {
 	-- configure formatter
 	{
 		"stevearc/conform.nvim",
-		init = function()
-			-- disable autoformat as it sometimes take too long
-			vim.b.disable_autoformat = true
-			vim.g.disable_autoformat = true
-		end,
 		opts = function()
 			return {
 				formatters_by_ft = {
@@ -50,19 +45,6 @@ return {
 				},
 			}
 		end,
-		keys = {
-			{
-				"<leader>cf",
-				function()
-					require("conform").format({
-						bufnr = vim.api.nvim_get_current_buf(),
-						timeout_ms = 10000,
-						lsp_format = "fallback",
-					})
-				end,
-				desc = "Format Buffer",
-			},
-		},
 	},
 
   -- configure flash
@@ -72,6 +54,26 @@ return {
       modes = {
         char = {
           jump_labels = true
+        }
+      }
+    }
+  },
+
+  -- configure snacks
+  {
+    "folke/snacks.nvim",
+    opts = {
+      picker = {
+        hidden = true,
+        ignored = true,
+        sources = {
+          files = {
+            hidden = true,
+            ignored = true,
+            exclude = {
+              "**/.git/*",
+            }
+          }
         }
       }
     }
