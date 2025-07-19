@@ -42,40 +42,41 @@ return {
 					["markdown.mdx"] = { "prettier", "prettierd" },
 					graphql = { "prettier", "prettierd" },
 					handlebars = { "prettier", "prettierd" },
+					rust = { "rustfmt", lsp_format = "fallback" },
 				},
 			}
 		end,
 	},
 
-  -- configure flash
-  {
-    "folke/flash.nvim",
-    opts = {
-      modes = {
-        char = {
-          jump_labels = true
-        }
-      }
-    }
-  },
+	-- configure flash
+	{
+		"folke/flash.nvim",
+		opts = {
+			modes = {
+				char = {
+					jump_labels = true,
+				},
+			},
+		},
+	},
 
-  -- configure snacks
-  {
-    "folke/snacks.nvim",
-    opts = {
-      picker = {
-        hidden = true,
-        ignored = true,
-        sources = {
-          files = {
-            hidden = true,
-            ignored = true,
-            exclude = {
-              "**/.git/*",
-            }
-          }
-        }
-      }
-    }
-  }
+	-- configure snacks
+	{
+		"folke/snacks.nvim",
+		opts = {
+			picker = {
+				hidden = true,
+				ignored = true,
+				sources = {
+					files = {
+						hidden = true,
+						ignored = true,
+						exclude = {
+							"**/.git/*",
+						},
+					},
+				},
+			},
+		},
+	},
 }
