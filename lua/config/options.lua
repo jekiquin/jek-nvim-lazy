@@ -12,3 +12,7 @@ vim.opt.expandtab = true
 
 vim.b.autoformat = false
 vim.g.autoformat = false
+
+vim.cmd([[
+ autocmd InsertLeave * silent! update
+]])
