@@ -18,6 +18,7 @@ return {
     keymaps = {
       ["<C-j>"] = "actions.preview_scroll_down",
       ["<C-k>"] = "actions.preview_scroll_up",
+      ["q"] = {"actions.close", mode = "n" }
     }
   },
   -- Optional dependencies
