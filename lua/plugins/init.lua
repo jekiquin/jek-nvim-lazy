@@ -5,4 +5,5 @@ return {
   { import = "plugins.overrides.lazy"},
   { import = "plugins.overrides.flash"},
   { import = "plugins.overrides.snacks"},
+  { import = "plugins.overrides.todo-comments"},
 }
