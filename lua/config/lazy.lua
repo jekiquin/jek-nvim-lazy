@@ -21,6 +21,11 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- only change the shell whe it's on windows
+if os.getenv('OS') == 'Windows_NT' then
+  vim.opt.shell = 'powershell.exe'
+end
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
