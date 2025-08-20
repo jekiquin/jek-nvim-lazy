@@ -17,5 +17,20 @@ return {
 				},
 			},
 		},
+		keys = {
+			{
+				"<Space>ftt",
+				function()
+					Snacks.terminal.toggle(nil, {
+						win = {
+							style = "float",
+							border = vim.g.border_style or "rounded",
+							padding = { 1, 2 }
+						}
+					})
+				end,
+				desc = "Toggle floating terminal",
+			},
+		},
 	},
 }
