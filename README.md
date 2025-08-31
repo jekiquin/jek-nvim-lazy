@@ -1,6 +1,3 @@
 # Lazy
 
-## Requirements:
-1. Neovim >= 0.8.0
-2. Git >= 2.19.0
-3. [luarocks](https://luarocks.org/) - maybe only needed for development?
+This will no longer be maintained. Please go to [dotfile repo](https://github.com/jekiquin/jek-dotfile)
